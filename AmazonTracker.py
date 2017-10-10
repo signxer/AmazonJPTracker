@@ -1,6 +1,7 @@
-# 日亚价格监控 Amazon JP Tracker V0.1
+# 日亚价格监控
+# Amazon JP Tracker
 # 2017-10-10 23:43
-# https://github.com/signxer/
+# https://github.com/signxer/AmazonJPTracker
 import re
 import os
 import time
