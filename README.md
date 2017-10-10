@@ -5,4 +5,4 @@
 3. 用GitHub账户登入Server酱 https://sc.ftqq.com/ ，并且完成绑定微信。
 4. 用任意一文本编辑器编辑AmazonTracker.py,修改设置部分的参数，主要是SCKEY部分。
 5. 运行程序。
-  (在AmazonTracker.py的目录下按Shift+鼠标右键，选择“在此处打开PowerShell窗口”,输入python AmazonTracker.py,回车。)
+    (在AmazonTracker.py的目录下按Shift+鼠标右键，选择“在此处打开PowerShell窗口”,输入python AmazonTracker.py,回车。)
