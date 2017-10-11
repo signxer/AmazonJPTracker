@@ -8,13 +8,13 @@
 (在AmazonTracker.py的目录下按Shift+鼠标右键，选择“在此处打开PowerShell窗口”,输入  
 
     pip install beautifulsoup4
-    pip install lxml  
-    
+    pip install lxml
+
 ,回车。)
 6. 运行程序。 
 (输入  
 
-    python AmazonTracker,py  
+    python AmazonTracker.py  
     
 ,回车。)
 
