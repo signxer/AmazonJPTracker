@@ -93,7 +93,7 @@ def main():
     else:
         content = content+ ",未达到设定值" + str(setPrice)
         print(content)
-        time.sleep(timeInterval)
+    time.sleep(timeInterval)
 
 if __name__ == "__main__":
     while True:
