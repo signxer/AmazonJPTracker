@@ -53,7 +53,7 @@ user_agent_list = [\
 #---------------------------------------------------------------------
 
 def getPrice(url,user_agent_list):
-	try:
+    try:
         url = urllib.parse.quote(url,safe='/:?=+')
         ua = random.choice(user_agent_list)
         req = urllib.request.Request(
