@@ -1,6 +1,6 @@
 # 日亚价格监控
-# Amazon JP Tracker
-# 2017-10-10 23:43
+# Amazon JP Tracker V0.2
+# 2017-10-12 10:46
 # https://github.com/signxer/AmazonJPTracker
 import re
 import os
@@ -53,23 +53,26 @@ user_agent_list = [\
 #---------------------------------------------------------------------
 
 def getPrice(url,user_agent_list):
-    url = urllib.parse.quote(url,safe='/:?=+')
-    ua = random.choice(user_agent_list)
-    req = urllib.request.Request(
-        url,
-        data=None, 
-        headers={
-            'User-Agent': ua
-        }
-    )
-    f = urllib.request.urlopen(req)
-    soup = BeautifulSoup(f.read().decode('utf-8','ignore'), "lxml")
-    data = soup.find('span',id="priceblock_ourprice")
-    if data is None:
-        return 0 #Error
-    else:
-        price = int(data.string[2:].replace(",",""))
-        return price
+	try:
+        url = urllib.parse.quote(url,safe='/:?=+')
+        ua = random.choice(user_agent_list)
+        req = urllib.request.Request(
+            url,
+            data=None, 
+            headers={
+                'User-Agent': ua
+            }
+        )
+        f = urllib.request.urlopen(req)
+        soup = BeautifulSoup(f.read().decode('utf-8','ignore'), "lxml")
+        data = soup.find('span',id="priceblock_ourprice")
+        if data is None:
+            return 0 #Error
+        else:
+            price = int(data.string[2:].replace(",",""))
+            return price
+    except:
+        return 0
 
 def sendAlarm(title,content):
     alarmUrl = 'https://sc.ftqq.com/'+sckey+'.send?text='+urllib.parse.quote(title)+'&desp='+urllib.parse.quote(content)
